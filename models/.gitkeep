@@ -1,0 +1,26 @@
+# Thư mục chứa model ECAPA-TDNN (.pt / .pth)
+#
+# Đặt file model của bạn tại đây, ví dụ:
+#   models/your_model.pt
+#   models/ecapa_tdnn_512.pt
+#
+# Sau đó cập nhật config.yaml:
+#   auth:
+#     model_path: models/your_model.pt
+#
+# ─── Nguồn model ────────────────────────────────────────────────────────
+# Nếu bạn đã train ECAPA-TDNN từ project trước:
+#   → Copy file .pt từ checkpoint ra đây
+#
+# Nếu chưa có model, dùng chế độ demo để test pipeline (không cần model):
+#   python auth/enroll.py --demo --user alice
+#   (pipeline sẽ dùng random embedding, không có giá trị xác thực thật)
+#
+# ─── Cấu trúc checkpoint hỗ trợ ────────────────────────────────────────
+# Format 1 — state_dict:
+#   {"model_state_dict": {...}, "epoch": 10, ...}
+#
+# Format 2 — module serialize:
+#   torch.save(model, "models/your_model.pt")
+# ────────────────────────────────────────────────────────────────────────
+.gitkeep

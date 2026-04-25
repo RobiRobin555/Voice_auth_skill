@@ -1,0 +1,44 @@
+# ══════════════════════════════════════════════════════
+#  .gitignore — Voice Auth Tray Application
+# ══════════════════════════════════════════════════════
+
+# ── Model files ──────────────────────────────────────
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.bin
+
+# ── Voiceprints (dữ liệu cá nhân) ───────────────────
+auth/voiceprints/*.npy
+auth/voiceprints/*.npz
+
+# ── Cohort audio ─────────────────────────────────────
+data/cohort/*.wav
+data/cohort/*.flac
+data/cohort/*.mp3
+
+# ── Logs ─────────────────────────────────────────────
+logs/*.jsonl
+logs/*.log
+
+# ── Python cache ─────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environments ─────────────────────────────
+.venv/
+venv/
+
+# ── IDE / OS ─────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# ── Temp ─────────────────────────────────────────────
+parakeet_*.wav
+enroll_*.wav

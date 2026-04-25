@@ -1,0 +1,2 @@
+# Thư mục chứa icon cho system tray
+# Nếu không có icon.ico, app sẽ tự tạo icon bằng Pillow

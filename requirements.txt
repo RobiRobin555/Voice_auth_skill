@@ -1,0 +1,25 @@
+# Voice Auth Tray Application — Dependencies
+# Cài tất cả: pip install -r requirements.txt
+
+# Core audio
+sounddevice>=0.4.6
+soundfile>=0.12.1
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Deep learning
+torch>=2.0.0
+torchaudio>=2.0.0
+
+# System Tray + GUI
+pystray>=0.19.0
+Pillow>=10.0.0
+
+# Config
+pyyaml>=6.0
+
+# Parakeet STT qua NVIDIA NeMo (cài riêng):
+#   pip install nemo_toolkit[asr]
+
+# Wake word (tùy chọn):
+# openwakeword>=0.6.0

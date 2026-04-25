@@ -1,0 +1,12 @@
+# Thư mục này chứa embedding voiceprint người dùng (.npy)
+# 
+# Mỗi file tương ứng với 1 user:
+#   alice.npy  — voiceprint của Alice (192-dim, L2-normalized)
+#   bob.npy    — voiceprint của Bob
+#   ...
+#
+# Tạo bằng lệnh:
+#   python auth/enroll.py --user alice --samples 5
+#
+# ⚠️ Cân nhắc mã hóa các file .npy này nếu triển khai production.
+.gitkeep

@@ -1,0 +1,16 @@
+# Thư mục chứa file .wav người lạ dùng cho AS-Norm cohort
+#
+# Yêu cầu:
+#   - 50 đến 200 file .wav (càng nhiều càng ổn định)
+#   - Mỗi file ~3-10 giây, 16 kHz mono
+#   - Là giọng của người KHÔNG PHẢI user đăng ký
+#
+# Ví dụ nguồn miễn phí:
+#   - LibriSpeech test-clean (https://www.openslr.org/12/)
+#   - VCTK Corpus (https://datashare.ed.ac.uk/handle/10283/2651)
+#
+# Đặt file vào đây:
+#   data/cohort/stranger_001.wav
+#   data/cohort/stranger_002.wav
+#   ...
+.gitkeep

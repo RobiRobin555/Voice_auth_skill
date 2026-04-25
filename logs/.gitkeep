@@ -1,0 +1,4 @@
+# Thư mục chứa log xác thực từ chối (auth_log.jsonl)
+# Mỗi dòng là 1 JSON object với format:
+#   {"timestamp": ..., "event": "auth_rejected", "score_asnorm": ..., "audio_hash": ...}
+.gitkeep

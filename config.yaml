@@ -1,0 +1,48 @@
+# ══════════════════════════════════════════════════════════════
+#  OpenClaw Voice Auth Skill — config.yaml
+#  Tất cả path là tương đối so với thư mục skill này.
+#  Daemon tự resolve đúng dù OpenClaw gọi từ bất kỳ đâu.
+# ══════════════════════════════════════════════════════════════
+
+auth:
+  user: alice
+
+  # ── Model ECAPA-TDNN ─────────────────────────────────────────
+  # Đặt file .pt/.pth vào thư mục models/ (xem models/README.txt)
+  model_path: models/model.pt
+
+  # ── Voiceprint ───────────────────────────────────────────────
+  # Tạo bằng: python auth/enroll.py --user alice --samples 5
+  voiceprint_path: auth/voiceprints/alice.npy
+
+  # ── Cohort (AS-Norm) ─────────────────────────────────────────
+  # Đặt 50-200 file .wav người lạ vào data/cohort/
+  # (xem data/cohort/README.txt để biết cách lấy dataset)
+  cohort_dir: data/cohort
+
+  # ── Ngưỡng AS-Norm Z-score ───────────────────────────────────
+  # 1.5 = cân bằng  |  2.0 = bảo mật cao  |  1.0 = dễ chấp nhận
+  # Nếu không có cohort: đặt 0.75 (cosine mode)
+  threshold_asnorm: 1.5
+
+  # Thời gian ghi âm mỗi lần xác thực (giây)
+  max_auth_duration_sec: 4
+
+# ── Kết nối OpenClaw ─────────────────────────────────────────
+# "auto"   : tự phát hiện (import → cli → http)
+# "import" : OpenClaw cùng virtualenv
+# "cli"    : gọi qua lệnh `openclaw run --prompt "..."`
+# "http"   : POST tới REST API
+openclaw_mode: auto
+
+# ── Wake Word ────────────────────────────────────────────────
+wake_word:
+  enabled: true
+  engine: openwakeword     # hoặc "pvporcupine" (cần API key)
+  keyword: "hey openclaw"
+  listen_duration_sec: 2.0
+
+# ── Logging ──────────────────────────────────────────────────
+logging:
+  path: logs/auth_log.jsonl
+  silent_reject: true        # không phát âm thanh khi từ chối
